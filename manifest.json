@@ -1,0 +1,35 @@
+{
+  "manifest_version": 2,
+
+  "name": "Gold Price",
+  "description": "This extension shows the current price of COMEX",
+  "version": "1.0",
+
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  
+  "background": {
+    "page": "html/background.html",
+    "persistent": false
+  },
+  "permissions": [
+  	"notifications",
+  	"storage",
+  	"tabs",
+    "activeTab",
+    "http://hq.sinajs.cn/?_=1436758119430/&list=hf_GC",
+    "<all_urls>"
+  ],
+  
+  "options_page": "html/options.html",
+  "options_ui": {
+    "page": "html/options.html",
+    "chrome_style": true,
+    "open_in_tab": false
+  },
+  
+  "browser_action": {
+    "default_icon": "img/icon.png",
+    "default_title": "Gold Price",
+    "default_popup": "html/popup.html"
+  }
+}
